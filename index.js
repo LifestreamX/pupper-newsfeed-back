@@ -6,8 +6,8 @@ import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js';
 
-// require('dotenv').config();
-// const path = require('path');
+
+
 
 const app = express();
 dotenv.config();
@@ -18,12 +18,17 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+  res.send("Hello Pupper News Feed Api")
+})
 
 const PORT = process.env.PORT || 5000;
 
 
 if (process.end.NODE-ENV)
 
+
+// Connect to database
 mongoose
   .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
