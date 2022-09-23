@@ -13,9 +13,9 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
-app.use('/routes/posts', postRoutes);
+app.use('/posts', postRoutes);
 
-app.get('/', (req, res) => {
+app.get('/posts', (req, res) => {
   res.send('Hello Pupper News Feed Api');
 });
 
