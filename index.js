@@ -15,9 +15,9 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-// app.get('/', (req, res) => {
-//   res.send('Hello Pupper News Feed Api');
-// });
+app.get('/', (req, res) => {
+  res.send('Hello Pupper News Feed Api');
+});
 
 const PORT = process.env.PORT || 5000;
 
