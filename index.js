@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
   res.send('Hello Pupper News Feed Api');
 });
 
-var distDir = __dirname + "/dist/";
+// var distDir = __dirname + "/dist/";
 
-app.use(express.static(distDir));
+// app.use(express.static(distDir));
 
 const PORT = process.env.PORT || 5000;
 
