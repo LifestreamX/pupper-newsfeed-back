@@ -19,18 +19,17 @@ app.get('/', (req, res) => {
   res.send('Hello Pupper News Feed Api');
 });
 
-
 const PORT = process.env.PORT || 5000;
 
-  // Connect to database
-  mongoose
-    .connect(process.env.CONNECTION_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
-    .then(() =>
-      app.listen(PORT, () => console.log(`server running on port: ${PORT}`))
-    )
-    .catch((error) => console.log(error.message));
+// Connect to database
+mongoose
+  .connect(process.env.CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() =>
+    app.listen(PORT, () => console.log(`server running on port: ${PORT}`))
+  )
+  .catch((error) => console.log(error.message));
 
 mongoose.set('useFindAndModify', false);
