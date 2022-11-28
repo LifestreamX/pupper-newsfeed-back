@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.send('Hello');
 });
 
-const PORT = process.env.PORT || 5000 ;
+const PORT = process.env.PORT || 5000;
 
 // Connect to database
 mongoose
@@ -27,9 +27,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() =>
-    app.listen(PORT, () => console.log(`server running on port: ${PORT}`))
-  )
+  .then(() => app.listen(PORT, '0.0.0.0'))
   .catch((error) => console.log(error.message));
 
 // mongoose.set('useFindAndModify', false);
