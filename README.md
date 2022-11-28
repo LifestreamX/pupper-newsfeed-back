@@ -15,8 +15,7 @@ Pupper Newsfeed
 
 ## Screenshots
 
-![](screenshots/screenshot1.png)
-![](screenshots/screenshot2.png)
+![](screenshots/home1.png)
 
 
 ## Technologies
