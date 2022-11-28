@@ -2,7 +2,7 @@
 
 # Project Title
 
-Pupper Newsfeed (Backend)
+Pupper Newsfeed (Back End)
 
 
 
