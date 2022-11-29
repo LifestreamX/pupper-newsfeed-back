@@ -19,14 +19,11 @@ app.get('/', (req, res) => {
   res.send('Hello');
 });
 
-CONNECTION_URL =
-  'mongodb+srv://lifestream:lifestream123@cluster0.sct8d.mongodb.net/?retryWrites=true&w=majority';
-
 const PORT = process.env.PORT || 5000;
 
 // Connect to database
 mongoose
-  .connect(CONNECTION_URL, {
+  .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
