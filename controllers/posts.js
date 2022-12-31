@@ -74,7 +74,7 @@ export const lovePost = async (req, res) => {
     id,
 
     // { loveCount: post.loveCount < 1 ? post.loveCount + 1 : post.loveCount - 1 },
-    { loveCount: post.loveCount++ },
+    { loveCount: post.loveCount + 1 },
     { new: true }
   );
 
