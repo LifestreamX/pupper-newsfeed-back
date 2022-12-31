@@ -73,7 +73,8 @@ export const lovePost = async (req, res) => {
   const updatedPost = await PostMessage.findByIdAndUpdate(
     id,
 
-    { loveCount: post.loveCount < 1 ? post.loveCount + 1 : post.loveCount - 1 },
+    // { loveCount: post.loveCount < 1 ? post.loveCount + 1 : post.loveCount - 1 },
+    { loveCount: post.loveCount++ },
     { new: true }
   );
 
