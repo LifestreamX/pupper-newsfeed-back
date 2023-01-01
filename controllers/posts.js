@@ -72,10 +72,9 @@ export const lovePost = async (req, res) => {
   const post = await PostMessage.findById(id);
   const updatedPost = await PostMessage.findByIdAndUpdate(
     id,
-
     { loveCount: post.loveCount < 1 ? post.loveCount + 1 : post.loveCount - 1 },
     { new: true }
   );
 
-  res.json(updatedPost);
+ return res.json(updatedPost);
 };
